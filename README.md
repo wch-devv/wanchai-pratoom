@@ -20,5 +20,5 @@ I love writing code, building web applications, and exploring new technologies. 
 
 #### 📊 Language Usage Across Projects
 
-![Language Usage](./languages.svg)
+![Language Usage](./languages.svg) 
 
