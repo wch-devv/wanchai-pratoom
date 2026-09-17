@@ -6,16 +6,26 @@
     .desc { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 11px; fill: #a0a0a0; }
     .lang-item { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 12px; fill: #e1e1e6; }
     .pct { font-weight: 600; fill: #ffffff; }
+    .css-item {
+      animation: cssFloat 2.4s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    @keyframes cssFloat {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(7px); }
+    }
   </style>
 
   <rect class="card" x="1" y="1" width="598" height="258" />
+
+  <text x="25" y="32" class="title">Language Usage Across Projects (Combined)</text>
 
   <g transform="translate(25, 48)">
     <clipPath id="bar-clip">
       <rect x="0" y="0" width="550" height="10" rx="5" />
     </clipPath>
     <rect x="0" y="0" width="550" height="10" fill="#2d2b55" rx="5" />
-    <!-- JavaScript / Node.js 46.58% -->
     <g clip-path="url(#bar-clip)">
       <rect x="0" y="0" width="256" height="10" fill="#f7df1e" />
       <rect x="256" y="0" width="234" height="10" fill="#b026ff" />
@@ -25,7 +35,6 @@
     </g>
   </g>
 
-  <!-- Frontend -->
   <g transform="translate(25, 82)">
     <text x="0" y="0" class="category-title">🎨 Frontend (53.12%)</text>
     <text x="0" y="15" class="desc">UI, templates, markup &amp; styling</text>
@@ -36,11 +45,12 @@
     <circle cx="160" cy="30" r="4" fill="#e34f26" />
     <text x="170" y="34" class="lang-item">HTML <tspan class="pct">8.78%</tspan></text>
 
-    <circle cx="280" cy="30" r="4" fill="#1572b6" />
-    <text x="290" y="34" class="lang-item">CSS &amp; Less <tspan class="pct">1.81%</tspan></text>
+    <g class="css-item">
+      <circle cx="280" cy="30" r="4" fill="#1572b6" />
+      <text x="290" y="34" class="lang-item">CSS &amp; Less <tspan class="pct">1.81%</tspan></text>
+    </g>
   </g>
 
-  <!-- Backend -->
   <g transform="translate(25, 150)">
     <text x="0" y="0" class="category-title">⚙️ Backend &amp; Systems (46.80%)</text>
     <text x="0" y="15" class="desc">Node.js services, APIs, application logic &amp; data processing</text>
@@ -58,7 +68,6 @@
     <text x="325" y="34" class="lang-item">Python <tspan class="pct">0.08%</tspan></text>
   </g>
 
-  <!-- DevOps and other languages -->
   <g transform="translate(25, 212)">
     <text x="0" y="0" class="category-title">🚀 DevOps &amp; Other (0.17%)</text>
     <text x="0" y="15" class="desc">Build tools, automation &amp; infrastructure</text>
