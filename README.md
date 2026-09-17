@@ -20,6 +20,6 @@ I love writing code, building web applications, and exploring new technologies. 
 
 #### 📊 Language Usage Across Projects
 
-<div align="center">
+<div align="left">
   <img src="https://raw.githubusercontent.com/wch-devv/wch-devv/main/languages.svg" alt="Language Usage Across Projects" />
 </div>
