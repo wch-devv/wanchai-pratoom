@@ -1,30 +1,28 @@
-<svg width="600" height="260" viewBox="0 0 600 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="225" viewBox="0 0 600 225" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     .card { fill: #141321; stroke: #fe428e; stroke-width: 1; stroke-opacity: 0.4; rx: 10px; }
-    .title { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 16px; font-weight: 700; fill: #fe428e; }
     .category-title { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 13px; font-weight: 700; fill: #a9fef7; }
     .desc { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 11px; fill: #a0a0a0; }
     .lang-item { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 12px; fill: #e1e1e6; }
     .pct { font-weight: 600; fill: #ffffff; }
-    .css-item {
-      animation: cssFloat 2.4s ease-in-out infinite;
-      transform-box: fill-box;
-      transform-origin: center;
-    }
-    @keyframes cssFloat {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(7px); }
-    }
   </style>
 
-  <rect class="card" x="1" y="1" width="598" height="258" />
-
-  <text x="25" y="32" class="title">Language Usage Across Projects (Combined)</text>
-
-  <g transform="translate(25, 48)">
+  <defs>
+    <!-- เอฟเฟกต์แสงเงาวิ่งผ่านเส้นแถบสี -->
+    <linearGradient id="bar-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
     <clipPath id="bar-clip">
       <rect x="0" y="0" width="550" height="10" rx="5" />
     </clipPath>
+  </defs>
+
+  <rect class="card" x="1" y="1" width="598" height="223" />
+
+  <!-- แถบ Progress Bar พร้อมลำแสงเคลื่อนไหว -->
+  <g transform="translate(25, 24)">
     <rect x="0" y="0" width="550" height="10" fill="#2d2b55" rx="5" />
     <g clip-path="url(#bar-clip)">
       <rect x="0" y="0" width="256" height="10" fill="#f7df1e" />
@@ -32,10 +30,16 @@
       <rect x="490" y="0" width="48" height="10" fill="#e34f26" />
       <rect x="538" y="0" width="10" height="10" fill="#1572b6" />
       <rect x="548" y="0" width="2" height="10" fill="#00add8" />
+      
+      <!-- แสงวิ่งวนลูปผ่านเส้นบาร์ -->
+      <rect x="-180" y="0" width="180" height="10" fill="url(#bar-shimmer)">
+        <animate attributeName="x" from="-180" to="560" dur="2.2s" repeatCount="indefinite" />
+      </rect>
     </g>
   </g>
 
-  <g transform="translate(25, 82)">
+  <!-- Frontend -->
+  <g transform="translate(25, 54)">
     <text x="0" y="0" class="category-title">🎨 Frontend (53.12%)</text>
     <text x="0" y="15" class="desc">UI, templates, markup &amp; styling</text>
 
@@ -45,13 +49,12 @@
     <circle cx="160" cy="30" r="4" fill="#e34f26" />
     <text x="170" y="34" class="lang-item">HTML <tspan class="pct">8.78%</tspan></text>
 
-    <g class="css-item">
-      <circle cx="280" cy="30" r="4" fill="#1572b6" />
-      <text x="290" y="34" class="lang-item">CSS &amp; Less <tspan class="pct">1.81%</tspan></text>
-    </g>
+    <circle cx="280" cy="30" r="4" fill="#1572b6" />
+    <text x="290" y="34" class="lang-item">CSS &amp; Less <tspan class="pct">1.81%</tspan></text>
   </g>
 
-  <g transform="translate(25, 150)">
+  <!-- Backend & Systems -->
+  <g transform="translate(25, 120)">
     <text x="0" y="0" class="category-title">⚙️ Backend &amp; Systems (46.80%)</text>
     <text x="0" y="15" class="desc">Node.js services, APIs, application logic &amp; data processing</text>
 
@@ -68,7 +71,8 @@
     <text x="325" y="34" class="lang-item">Python <tspan class="pct">0.08%</tspan></text>
   </g>
 
-  <g transform="translate(25, 212)">
+  <!-- DevOps & Other -->
+  <g transform="translate(25, 180)">
     <text x="0" y="0" class="category-title">🚀 DevOps &amp; Other (0.17%)</text>
     <text x="0" y="15" class="desc">Build tools, automation &amp; infrastructure</text>
 
