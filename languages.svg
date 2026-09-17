@@ -10,8 +10,6 @@
 
   <rect class="card" x="1" y="1" width="598" height="258" />
 
-  <text x="25" y="32" class="title">Language Usage Across Projects (Combined)</text>
-
   <g transform="translate(25, 48)">
     <clipPath id="bar-clip">
       <rect x="0" y="0" width="550" height="10" rx="5" />
