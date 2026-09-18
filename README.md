@@ -1,8 +1,6 @@
 ## Hi there 👋 I'm Wanchai Pratoom
 Full Stack Developer based in Bangkok, Thailand 🇹🇭
 
-📫 **Let's Connect**: 📧 [its.wanchai.p@gmail.com](mailto:its.wanchai.p@gmail.com) | 💼 [LinkedIn: Wanchai Pratoom](https://www.linkedin.com/in/wch-dev/)
-
 🌱 **Currently exploring**: Go, Scalable Architecture, and Cloud Infrastructure  
 ⚡ **Fun fact**: I enjoy solving complex logic problems and constantly learning new tools.
 
